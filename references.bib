@@ -1,0 +1,321 @@
+@inproceedings{gulwani2010,
+    author = {Gulwani, Sumit},
+    title = {Dimensions in program synthesis},
+    year = {2010},
+    isbn = {9781450301329},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/1836089.1836091},
+    abstract = {Program Synthesis, which is the task of discovering programs that realize user intent, can be useful in several scenarios: enabling people with no programming background to develop utility programs, helping regular programmers automatically discover tricky/mundane details, program understanding, discovery of new algorithms, and even teaching.This paper describes three key dimensions in program synthesis: expression of user intent, space of programs over which to search, and the search technique. These concepts are illustrated by brief description of various program synthesis projects that target synthesis of a wide variety of programs such as standard undergraduate textbook algorithms e.g., sorting, dynamic programming), program inverses(e.g., decoders, deserializers), bitvector manipulation routines, deobfuscated programs, graph algorithms, text-manipulating routines, mutual exclusion algorithms, etc.},
+    booktitle = {Proceedings of the 12th International ACM SIGPLAN Symposium on Principles and Practice of Declarative Programming},
+    pages = {13–24},
+    numpages = {12},
+    keywords = {smt solving, sat solving, programming by examples, programming by demonstration, probabilistic inference, machine learning, inductive synthesis, genetic programming, deductive synthesis, belief propagation},
+    location = {Hagenberg, Austria},
+    series = {PPDP '10}
+}
+
+@article{gulwani2017,
+  title={Program synthesis},
+  author={Gulwani, Sumit and Polozov, Oleksandr and Singh, Rishabh and others},
+  journal={Foundations and Trends{\textregistered} in Programming Languages},
+  volume={4},
+  number={1-2},
+  pages={1--119},
+  year={2017},
+  publisher={Now Publishers, Inc.}
+}
+
+@article{koza1994,
+    author={Koza, John R.},
+    title={Genetic programming as a means for programming computers by natural selection},
+    journal={Statistics and Computing},
+    year={1994},
+    month={Jun},
+    day={01},
+    volume={4},
+    number={2},
+    pages={87-112},
+    abstract={Many seemingly different problems in machine learning, artificial intelligence, and symbolic processing can be viewed as requiring the discovery of a computer program that produces some desired output for particular inputs. When viewed in this way, the process of solving these problems becomes equivalent to searching a space of possible computer programs for a highly fit individual computer program. The recently developed genetic programming paradigm described herein provides a way to search the space of possible computer programs for a highly fit individual computer program to solve (or approximately solve) a surprising variety of different problems from different fields. In genetic programming, populations of computer programs are genetically bred using the Darwinian principle of survival of the fittest and using a genetic crossover (sexual recombination) operator appropriate for genetically mating computer programs. Genetic programming is illustrated via an example of machine learning of the Boolean 11-multiplexer function and symbolic regression of the econometric exchange equation from noisy empirical data.},
+    issn={1573-1375},
+    doi={10.1007/BF00175355}
+}
+
+@book{kozabook1,
+    author = {Koza, John R.},
+    title = {Genetic Programming: On the Programming of Computers by Means of Natural Selection},
+    publisher = {MIT Press},
+    year = {1992},
+    address = {Cambridge, MA, USA}
+}
+
+@article{oneill2010,
+    author={O'Neill, Michael
+    and Vanneschi, Leonardo
+    and Gustafson, Steven
+    and Banzhaf, Wolfgang},
+    title={Open issues in genetic programming},
+    journal={Genetic Programming and Evolvable Machines},
+    year={2010},
+    month={Sep},
+    day={01},
+    volume={11},
+    number={3},
+    pages={339-363},
+    abstract={It is approximately 50 years since the first computational experiments were conducted in what has become known today as the field of Genetic Programming (GP), twenty years since John Koza named and popularised the method, and ten years since the first issue appeared of the Genetic Programming {\&} Evolvable Machines journal. In particular, during the past two decades there has been a significant range and volume of development in the theory and application of GP, and in recent years the field has become increasingly applied. There remain a number of significant open issues despite the successful application of GP to a number of challenging real-world problem domains and progress in the development of a theory explaining the behavior and dynamics of GP. These issues must be addressed for GP to realise its full potential and to become a trusted mainstream member of the computational problem solving toolkit. In this paper we outline some of the challenges and open issues that face researchers and practitioners of GP. We hope this overview will stimulate debate, focus the direction of future research to deepen our understanding of GP, and further the development of more powerful problem solving algorithms.},
+    issn={1573-7632},
+    doi={10.1007/s10710-010-9113-2},
+}
+
+@inproceedings{mcdermott2012,
+    author = {McDermott, James and White, David R. and Luke, Sean and Manzoni, Luca and Castelli, Mauro and Vanneschi, Leonardo and Jaskowski, Wojciech and Krawiec, Krzysztof and Harper, Robin and De Jong, Kenneth and O'Reilly, Una-May},
+    title = {Genetic programming needs better benchmarks},
+    year = {2012},
+    isbn = {9781450311779},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/2330163.2330273},
+    abstract = {Genetic programming (GP) is not a field noted for the rigor of its benchmarking. Some of its benchmark problems are popular purely through historical contingency, and they can be criticized as too easy or as providing misleading information concerning real-world performance, but they persist largely because of inertia and the lack of good alternatives. Even where the problems themselves are impeccable, comparisons between studies are made more difficult by the lack of standardization. We argue that the definition of standard benchmarks is an essential step in the maturation of the field. We make several contributions towards this goal. We motivate the development of a benchmark suite and define its goals; we survey existing practice; we enumerate many candidate benchmarks; we report progress on reference implementations; and we set out a concrete plan for gathering feedback from the GP community that would, if adopted, lead to a standard set of benchmarks.},
+    booktitle = {Proceedings of the 14th Annual Conference on Genetic and Evolutionary Computation},
+    pages = {791–798},
+    numpages = {8},
+    keywords = {genetic programming, benchmarks},
+    location = {Philadelphia, Pennsylvania, USA},
+    series = {GECCO '12}
+}
+
+@inproceedings{psb1,
+    author = {Helmuth, Thomas and Spector, Lee},
+    title = {General Program Synthesis Benchmark Suite},
+    year = {2015},
+    isbn = {9781450334723},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/2739480.2754769},
+    abstract = {Recent interest in the development and use of non-trivial benchmark problems for genetic programming research has highlighted the scarcity of general program synthesis (also called "traditional programming") benchmark problems. We present a suite of 29 general program synthesis benchmark problems systematically selected from sources of introductory computer science programming problems. This suite is suitable for experiments with any program synthesis system driven by input/output examples. We present results from illustrative experiments using our reference implementation of the problems in the PushGP genetic programming system. The results show that the problems in the suite vary in difficulty and can be useful for assessing the capabilities of a program synthesis system.},
+    booktitle = {Proceedings of the 2015 Annual Conference on Genetic and Evolutionary Computation},
+    pages = {1039–1046},
+    numpages = {8},
+    keywords = {benchmarks, genetic programming, program synthesis},
+    location = {Madrid, Spain},
+    series = {GECCO '15}
+}
+
+@techreport{psb1full,
+    author = {Helmuth, Thomas and Spector, Lee},
+    title = {Detailed Problem Descriptions for General Program Synthesis Benchmark Suite},
+    institution = {School of Computer Science, University of Massachusetts},
+    address = {University of Massachusetts, Amherst, Massachusetts},
+    number = {Technical Report UM-CS-2015-006},
+    year = {2015},
+    url = {https://web.cs.umass.edu/publication/docs/2015/UM-CS-2015-006.pdf}
+}
+
+@inproceedings{psb2,
+    author = {Helmuth, Thomas and Kelly, Peter},
+    title = {PSB2: the second program synthesis benchmark suite},
+    year = {2021},
+    isbn = {9781450383509},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/3449639.3459285},
+    abstract = {For the past six years, researchers in genetic programming and other program synthesis disciplines have used the General Program Synthesis Benchmark Suite to benchmark many aspects of automatic program synthesis systems. These problems have been used to make notable progress toward the goal of general program synthesis: automatically creating the types of software that human programmers code. Many of the systems that have attempted the problems in the original benchmark suite have used it to demonstrate performance improvements granted through new techniques. Over time, the suite has gradually become outdated, hindering the accurate measurement of further improvements. The field needs a new set of more difficult benchmark problems to move beyond what was previously possible.In this paper, we describe the 25 new general program synthesis benchmark problems that make up PSB2, a new benchmark suite. These problems are curated from a variety of sources, including programming katas and college courses. We selected these problems to be more difficult than those in the original suite, and give results using PushGP showing this increase in difficulty. These new problems give plenty of room for improvement, pointing the way for the next six or more years of general program synthesis research.},
+    booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+    pages = {785–794},
+    numpages = {10},
+    keywords = {automatic program synthesis, benchmarking, genetic programming},
+    location = {Lille, France},
+    series = {GECCO '21}
+}
+
+@article{pushgp,
+    author={Spector, Lee and Robinson, Alan},
+    title={Genetic Programming and Autoconstructive Evolution with the Push Programming Language},
+    journal={Genetic Programming and Evolvable Machines},
+    year={2002},
+    month={Mar},
+    day={01},
+    volume={3},
+    number={1},
+    pages={7-40},
+    abstract={Push is a programming language designed for the expression of evolving programs within an evolutionary computation system. This article describes Push and illustrates some of the opportunities that it presents for evolutionary computation. Two evolutionary computation systems, PushGP and Pushpop, are described in detail. PushGP is a genetic programming system that evolves Push programs to solve computational problems. Pushpop, an ``autoconstructive evolution'' system, also evolves Push programs but does so while simultaneously evolving its own evolutionary mechanisms.},
+    issn={1573-7632},
+    doi={10.1023/A:1014538503543}
+}
+
+@inproceedings{push3,
+    author = {Spector, Lee and Klein, Jon and Keijzer, Maarten},
+    title = {The Push3 execution stack and the evolution of control},
+    year = {2005},
+    isbn = {1595930108},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    doi = {10.1145/1068009.1068292},
+    abstract = {The Push programming language was developed for use in genetic and evolutionary computation systems, as the representation within which evolving programs are expressed. It has been used in the production of several significant results, including results that were awarded a gold medal in the Human Competitive Results competition at GECCO-2004. One of Push's attractive features in this context is its transparent support for the expression and evolution of modular architectures and complex control structures, achieved through explicit code self-manipulation. The latest version of Push, Push3, enhances this feature by permitting explicit manipulation of an execution stack that contains the expressions that are queued for execution in the interpreter. This paper provides a brief introduction to Push and to execution stack manipulation in Push3. It then presents a series of examples in which Push3 was used with a simple genetic programming system (PushGP) to evolve programs with non-trivial control structures.},
+    booktitle = {Proceedings of the 7th Annual Conference on Genetic and Evolutionary Computation},
+    pages = {1689–1696},
+    numpages = {8},
+    keywords = {stack-based genetic programming, sorting, reversing a list, recursion, push, parity, iteration, factorial, exponentiation, combinators, Fibonacci sequence},
+    location = {Washington DC, USA},
+    series = {GECCO '05}
+}
+
+@techreport{push3full,
+    author = {Lee Spector and Chris Perry and John Klein and Maarten Keijzer},
+    title = {Push 3.0 programming language description},
+    institution = {School of Cognitive Science, Hampshire College},
+    address = {Hampshire College, Amherst, Massachusetts},
+    number = {Technical Report HC-CSTR-2004-02},
+    year = {2004},
+    url = {https://faculty.hampshire.edu/lspector/push3-description.html}
+}
+
+@article{mcdermott2022,
+    author = {McDermott, James and Kronberger, Gabriel and Orzechowski, Patryk and Vanneschi, Leonardo and Manzoni, Luca and Kalkreuth, Roman and Castelli, Mauro},
+    title = {Genetic programming benchmarks: looking back and looking forward},
+    year = {2022},
+    issue_date = {September 2022},
+    publisher = {Association for Computing Machinery},
+    address = {New York, NY, USA},
+    volume = {15},
+    number = {3},
+    doi = {10.1145/3578482.3578483},
+    abstract = {The top image shows a set of scales, which are intended to bring to mind the ideas of balance and fair experimentation which are the focus of our article on genetic programming benchmarks in this issue. Image by Elena Mozhvilo and made available under the Unsplash license on https://unsplash.com/photos/j06gLuKK0GM.},
+    journal = {SIGEVOlution},
+    month = dec,
+    articleno = {1},
+    numpages = {19}
+}
+
+@inproceedings{hotgp,
+author = {Fernandes, Matheus Campos and De Fran{\c c}a, Fabr{\' \i}cio Olivetti and Francesquini, Em{\' \i}lio},
+title = {HOTGP - Higher-Order Typed Genetic Programming},
+year = {2023},
+isbn = {9798400701191},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+doi = {10.1145/3583131.3590464},
+abstract = {Program synthesis is the process of generating a computer program following a set of specifications, which can be a high-level description of the problem and/or a set of input-output examples. The synthesis can be modeled as a search problem in which the search space is the set of all the programs valid under a grammar. As the search space is vast, brute force is usually not viable and search heuristics, such as genetic programming, also have difficulty navigating it without any guidance. In this paper we present HOTGP, a new genetic programming algorithm that synthesizes pure, typed, and functional programs. HOTGP leverages the knowledge provided by the rich data-types associated with the specification and the built-in grammar to constrain the search space and improve the performance of the synthesis. The grammar is based on Haskell's standard base library (the synthesized code can be directly compiled using any standard Haskell compiler) and includes support for higher-order functions, Λ-functions, and parametric polymorphism. Experimental results show that, when compared to 6 state-of-the-art algorithms using a standard set of benchmarks, HOTGP is competitive and capable of synthesizing the correct programs more frequently than any other of the evaluated algorithms.},
+booktitle = {Proceedings of the Genetic and Evolutionary Computation Conference},
+pages = {1091–1099},
+numpages = {9},
+keywords = {functional programming, genetic programming, inductive program synthesis},
+location = {Lisbon, Portugal},
+series = {GECCO '23}
+}
+
+@inbook{origami,
+author = {Fernandes, Matheus Campos and De Fran{\c c}a, Fabr{\' \i}cio Olivetti and Francesquini, Em{\' \i}lio},
+editor={Winkler, Stephan and Trujillo, Leonardo and Ofria, Charles and Hu, Ting},
+title={Origami: (un)folding the Abstraction of Recursion Schemes for Program Synthesis},
+bookTitle={Genetic Programming Theory and Practice XX},
+year={2024},
+publisher={Springer Nature Singapore},
+address={Singapore},
+chapter={14},
+pages={263-281},
+abstract={Program synthesisProgram synthesis with Genetic Programming searches for a correct program that satisfies the input specification, which is usually provided as input--output examples. One particular challenge is how to effectively handle loops and recursion avoiding programs that never terminate. A helpful abstraction that can alleviate this problem is the employment of Recursion Schemes that generalize the combination of data production and consumption. Recursion Schemes are very powerful as they allow the construction of programs that can summarize data, create sequences, and perform advanced calculations. The main advantage of writing a program using Recursion Schemes is that the programs are composed of well-defined templates with only a few parts that need to be synthesized. In this paper, we make an initial study of the benefits of using program synthesisProgram synthesis with fold and unfold templates and outline some preliminary experimental results. To highlight the advantages and disadvantages of this approach, we manually solved the entire GPSB benchmarkBenchmark using recursion schemes, highlighting the parts that should be evolved compared to alternative implementations. We noticed that, once the choice of which recursion schemeRecursion schemes is made, the synthesis process can be simplified as each of the missing parts of the template are reduced to simpler functions, which are further constrained by their own input and output types.},
+isbn={978-981-99-8413-8},
+doi={10.1007/978-981-99-8413-8_14}
+}
+
+@InProceedings{bananas,
+author="Fernandes, Matheus Campos
+and Fran{\c{c}}a, Fabr{\'i}cio Olivetti de
+and Francesquini, Emilio",
+editor="Paes, Aline
+and Verri, Filipe A. N.",
+title="Going Bananas! - Unfolding Program Synthesis with Origami",
+booktitle="Intelligent Systems",
+year="2025",
+publisher="Springer Nature Switzerland",
+address="Cham",
+pages="3--18",
+abstract="Automatically creating a computer program using input-output examples can be a challenging task, especially when trying to synthesize computer programs that require loops or recursion. Even though the use of recursion can make the algorithmic description more succinct and declarative, this concept creates additional barriers to program synthesis algorithms such as the creation and the attempt to evaluate non-terminating programs. One reason is that the recursive function must define how to traverse (or generate) the data structure and, at the same time, how to process it. In functional programming, the concept of Recursion Schemes decouples these two tasks by putting a major focus on the data processing. This can also help to avoid some of the pitfalls of recursive functions during program synthesis, as argued in the paper that introduced the Origami technique. The authors showed how this technique can be effective in finding solutions for programs that require folding a list. In this work, we incorporate other Recursion Schemes into Origami, such as accumulated folding, unfolding, and the combination of unfolding and folding. We evaluated it on the 29 problems of the standard General Program Synthesis Benchmark Suite 1, obtaining favorable results against other well-known algorithms. Overall, Origami achieves the best results in {\$}{\$}25{\backslash}{\%}{\$}{\$}25{\%}more problems than its predecessor (HOTGP) and an even higher increase when compared to other approaches. Not only that, but it can also consistently find a solution to problems for which other concurrent algorithms report a low success rate.",
+isbn="978-3-031-79032-4"
+}
+
+@book{fieldguide,
+author = {Poli, Riccardo and Langdon, William B. and McPhee, Nicholas Freitag},
+title = {A Field Guide to Genetic Programming},
+year = {2008},
+isbn = {1409200736},
+publisher = {Lulu Enterprises, UK Ltd},
+abstract = {Genetic programming (GP) is a systematic, domain-independent method for getting computers to solve problems automatically starting from a high-level statement of what needs to be done. Using ideas from natural evolution, GP starts from an ooze of random computer programs, and progressively refines them through processes of mutation and sexual recombination, until high-fitness solutions emerge. All this without the user having to know or specify the form or structure of solutions in advance. GP has generated a plethora of human-competitive results and applications, including novel scientific discoveries and patentable inventions. This unique overview of this exciting technique is written by three of the most active scientists in GP. See www.gp-field-guide.org.uk for more information on the book.}
+}
+
+@inbook{ultra,
+author="Spector, Lee and Helmuth, Thomas",
+editor="Riolo, Rick and Moore, Jason H. and Kotanchek, Mark",
+title="Uniform Linear Transformation with Repair and Alternation in Genetic Programming",
+bookTitle="Genetic Programming Theory and Practice XI",
+year="2014",
+publisher="Springer New York",
+address="New York, NY",
+pages="137--153",
+abstract="Several genetic programming researchers have argued for the utility of genetic operators that act uniformly. By ``act uniformly'' we mean two specific things: that the probability of an inherited program component being modified during inheritance is independent of the size and shape of the parent programs beyond the component in question; and that pairs of parents are combined in ways that allow arbitrary combinations of components from each parent to appear in the child. Uniform operators described in previous work have had limited utility, however, because of a mismatch between the relevant notions of uniformity and the hierarchical structure and variable sizes of many genetic programming representations. In this chapter we describe a new genetic operator, ULTRA, which incorporates aspects of both mutation and crossover and acts approximately uniformly across programs of variable sizes and structures. ULTRA treats hierarchical programs as linear sequences and includes a repair step to ensure that syntax constraints are satisfied after variation. We show that on the drug bioavailability and Pagie-1 benchmark problems ULTRA produces significant improvements both in problem-solving power and in program size relative to standard operators. Experiments with factorial regressionfactorial regression and with the boolean 6-multiplexer problem demonstrate that ULTRA can manipulate programs that make use of hierarchical structure, but also that it is not always beneficial. The demonstrations evolve programs in the Push programming language, which makes repair particularly simple, but versions of the technique should be applicable in other genetic programming systems as well.",
+isbn="978-1-4939-0375-7",
+doi="10.1007/978-1-4939-0375-7_8",
+}
+
+@Inbook{plush,
+author="Helmuth, Thomas and Spector, Lee and McPhee, Nicholas Freitag and Shanabrook, Saul",
+editor="Riolo, Rick and Worzel, Bill and Goldman, Brian and Tozier, Bill",
+title="Linear Genomes for Structured Programs",
+bookTitle="Genetic Programming Theory and Practice XIV",
+year="2018",
+publisher="Springer International Publishing",
+address="Cham",
+pages="85--100",
+abstract="In most genetic programming systems, candidate solution programs themselves serve as genome upon which variation operators act. However, because of the hierarchical structure of computer programs and the syntactic constraints that they must obey, it is difficult to implement variation operators that affect different parts of programs with uniform probability. This lack of uniformity can have detrimental effects on evolutionary search, such as increases in code bloat. In prior work, structured programs were linearized prior to variation in order to facilitate uniform variation. However, this necessitated syntactic repair after variation, which reintroduced non-uniformities. In this chapter we describe a new approach that uses linear genomes that are translated into hierarchical programs for execution. We present the new approach in detail and show how it facilitates both uniform variation and the evolution of programs with meaningful structure.",
+isbn="978-3-319-97088-2",
+doi="10.1007/978-3-319-97088-2_6",
+}
+
+@ARTICLE{lexicase,
+  author={Helmuth, Thomas and Spector, Lee and Matheson, James},
+  journal={IEEE Transactions on Evolutionary Computation}, 
+  title={Solving Uncompromising Problems With Lexicase Selection}, 
+  year={2015},
+  volume={19},
+  number={5},
+  pages={630-643},
+  keywords={Genetic programming;Sociology;Statistics;Algebra;Standards;Programming;Algorithm design and analysis;Genetic programming;lexicase selection;parent selection;PushGP;tournament selection;Genetic programming;lexicase selection;parent selection;PushGP;tournament selection},
+  doi={10.1109/TEVC.2014.2362729}}
+
+@misc{bmbestpractices,
+      title={Benchmarking in Optimization: Best Practice and Open Issues}, 
+      author={Thomas Bartz-Beielstein and Carola Doerr and Daan van den Berg and Jakob Bossek and Sowmya Chandrasekaran and Tome Eftimov and Andreas Fischbach and Pascal Kerschke and William La Cava and Manuel Lopez-Ibanez and Katherine M. Malan and Jason H. Moore and Boris Naujoks and Patryk Orzechowski and Vanessa Volz and Markus Wagner and Thomas Weise},
+      year={2020},
+      eprint={2007.03488},
+      archivePrefix={arXiv},
+      primaryClass={cs.NE},
+      url={https://arxiv.org/abs/2007.03488}, 
+}
+
+@misc{mitCourse,
+    title={Introduction to Program Synthesis},
+    author={Armando Solar-Lezama},
+    year={2023},
+    url={https://people.csail.mit.edu/asolar/SynthesisCourse/index.htm}
+}
+
+@ARTICLE{survey,
+  author={Sobania, Dominik and Schweim, Dirk and Rothlauf, Franz},
+  journal={IEEE Transactions on Evolutionary Computation}, 
+  title={A Comprehensive Survey on Program Synthesis With Evolutionary Algorithms}, 
+  year={2023},
+  volume={27},
+  number={1},
+  pages={82-97},
+  keywords={Benchmark testing;Evolutionary computation;Programming;Natural languages;Codes;Python;Task analysis;Benchmarks;evolutionary algorithms;genetic programming (GP);program synthesis},
+  doi={10.1109/TEVC.2022.3162324}}
+
+@misc{humies,
+  author       = {{Humies Awards}},
+  title        = {Annual Humies Awards for Human-Competitive Results},
+  howpublished = {\url{https://www.human-competitive.org}},
+  note         = {Annual awards recognizing human-competitive results
+                  produced by genetic and evolutionary computation},
+  year         = {2026}
+}

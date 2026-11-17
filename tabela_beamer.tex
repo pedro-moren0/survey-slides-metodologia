@@ -1,0 +1,71 @@
+% tabela_beamer.tex -- fragmento (sem preâmbulo), incluído por main.tex via \input.
+% Requer no preâmbulo de main.tex: xcolor=table, booktabs, multirow, pifont,
+% \cmark, \xmark, \cabecalho e \legenda.
+
+% ---------- Slide 1/3 ----------
+\begin{frame}{Taxa de sucesso por problema (1/3)}
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.15}
+  \rowcolors{3}{}{gray!15}
+  \begin{tabular}{lccc}
+    \cabecalho
+    Number IO                   & 96.0 (12.0) & 100 & \xmark \\
+    Smallest                    & 78.0 (50.0) & 100 & \xmark \\
+    Mirror Image                & 71.5 (75.0) & 100 & \cmark \\
+    Median                      & 62.0 (39.5) & 100 & \xmark \\
+    Negative to Zero            & 58.0 (60.0) & 98  & \cmark \\
+    Replace Space with Newline  & 51.0 (56.0) & 100 & \cmark \\
+    For Loop Index              & 40.0 (53.5) & 88  & \cmark \\
+    String Lengths Backwards    & 35.0 (57.0) & 100 & \cmark \\
+    Vector Average              & 32.5 (72.25) & 100 & \cmark \\
+    Last Index of Zero          & 30.0 (40.0) & 96  & \cmark \\
+    \bottomrule
+  \end{tabular}
+  \legenda
+\end{frame}
+
+% ---------- Slide 2/3 ----------
+\begin{frame}{Taxa de sucesso por problema (2/3)}
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.15}
+  \rowcolors{3}{}{gray!15}
+  \begin{tabular}{lccc}
+    \cabecalho
+    Grade                       & 23.2 (67.5) & 100 & \xmark \\
+    Compare String Lengths      & 20.0 (38.75) & 95 & \cmark \\
+    Syllables                   & 12.5 (19.5) & 76  & \cmark \\
+    Digits                      & 10.0 (28.0) & 100 & \cmark \\
+    Vectors Summed              & 7.5 (18.5)  & 93  & \cmark \\
+    Sum of Squares              & 7.0 (12.25) & 41  & \cmark \\
+    X-Word Lines                & 6.0 (56.75) & 98  & \cmark \\
+    Small or Large              & 6.0 (7.5)   & 92  & \xmark \\
+    Count Odds                  & 5.0 (10.0)  & 22  & \cmark \\
+    Scrabble Score              & 4.0 (17.0)  & 90  & \cmark \\
+    \bottomrule
+  \end{tabular}
+  \legenda
+\end{frame}
+
+% ---------- Slide 3/3 ----------
+\begin{frame}{Taxa de sucesso por problema (3/3)}
+  \centering
+  \small
+  \renewcommand{\arraystretch}{1.15}
+  \rowcolors{3}{}{gray!15}
+  \begin{tabular}{lccc}
+    \cabecalho
+    Super Anagrams              & 2.0 (25.0)  & 82  & \cmark \\
+    Double Letters              & 1.0 (16.0)  & 87  & \cmark \\
+    Checksum                    & 0.0 (1.0)   & 56  & \cmark \\
+    Even Squares                & 0.0 (1.0)   & 15  & \cmark \\
+    Pig Latin                   & 0.0 (0.0)   & 5   & \cmark \\
+    String Differences          & 0.0 (0.0)   & 1   & \cmark \\
+    Collatz Numbers             & 0.0 (0.0)   & 0   & \cmark \\
+    Wallis Pi                   & 0.0 (0.0)   & 0   & \cmark \\
+    Word Stats                  & 0.0 (0.0)   & 0   & \cmark \\
+    \bottomrule
+  \end{tabular}
+  \legenda
+\end{frame}

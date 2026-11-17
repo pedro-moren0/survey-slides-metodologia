@@ -1,0 +1,156 @@
+\documentclass[aspectratio=169,xcolor=table]{beamer}
+
+% --- Português do Brasil ---
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}      % acentos e hifenização corretos
+\usepackage{lmodern}          % fonte vetorial com suporte a acentos
+\usepackage[brazilian]{babel} % hifenização, datas e rótulos em PT-BR
+
+% --- Pacotes e comandos usados em tabela_beamer.tex ---
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{pifont}
+\usepackage{array}
+
+\newcommand{\cmark}{\ding{51}}
+\newcommand{\xmark}{\ding{55}}
+
+% --- Comandos usados em gramatica_beamer.tex ---
+% Tokens especiais (NEWLINE, INDENT, DEDENT) em negrito sem serifa
+\newcommand{\tok}[1]{\mbox{\textsf{\textbf{#1}}}}
+% Barra que separa as alternativas da BNF
+\newcommand{\ou}{$\mid$\ }
+
+% Cabeçalho da tabela reutilizado em todos os slides
+\newcommand{\cabecalho}{%
+  \toprule
+  \multirow{2}{*}{\textbf{Problema de benchmark}} &
+  \multicolumn{2}{c}{\textbf{Taxa de sucesso}} &
+  \multirow{2}{*}{\textbf{Iter./Recur.}} \\
+  \cmidrule(lr){2-3}
+  & \textbf{Mediana (IQR)} & \textbf{Máx.} & \\
+  \midrule
+}
+
+% Legenda da tabela, exibida abaixo da tabela em cada slide
+\newcommand{\legenda}{%
+  \par\vspace{0.6em}
+  {\footnotesize
+    \textbf{Tabela:} taxas de sucesso em \% \cite{survey}. \textbf{Mediana (IQR)}: mediana da taxa de
+   sucesso e intervalo interquartil; \textbf{Máx.}: maior taxa de sucesso observada.
+   \textbf{Iter./Recur.}: \cmark~= usa iteração/recursão; \xmark~= não usa.\par.}
+}
+
+\usetheme{default}
+\usecolortheme{default}
+\setbeamertemplate{navigation symbols}{}
+\title{A Comprehensive Survey on Program Synthesis With Evolutionary Algorithms}
+\institute{Metodologia de Pesquisa - 2026.3 \\
+Pós-graduação em Ciência da Computação - UFABC}
+\author{Pedro Moreno Silva}
+\date{\today}
+
+% OK - O que é síntese de programas?
+% OK -  que é programação genética?
+% OK - Como identificaram as representações mais usadas em GP?
+% OK - O que é Stack-based GP?
+% OK - O que é Grammar-guided GP?
+% OK - O que é Linear GP e outros?
+% OK - O que é o PSB1?
+% Como os GPs resolvem os problemas dos benchmarks? (tabela)
+% Conclusões tiradas pelos autores
+% Trabalhos futuros dos autores
+
+
+\begin{document}
+
+\begin{frame}
+  \titlepage
+\end{frame}
+
+\begin{frame}{Conteúdos}
+  \tableofcontents
+\end{frame}
+
+\input{conceitualizacao}
+\input{introducao}
+
+\section{Técnicas}
+\begin{frame}{\textit{Stack-based} GP}
+  \begin{itemize}
+    \item Expoente é o Push \cite{pushgp} e variantes,
+      linguagem projetada especificamente para GP.
+    \item Compõe a maior quantidade de artigos no \textit{survey}.
+    \item Programas são listas de instruções e literais.
+    \item Um literal é depositado na pilha do seu tipo e uma instrução consome
+      elementos das pilhas, empilhando seus resultados.
+  \end{itemize}
+  \begin{examples}
+    \texttt{(3 4 INTEGER.+) (1 2 INTEGER.+) INTEGER./}
+  \end{examples}
+\end{frame}
+\begin{frame}{\textit{Stack-based} GP}
+  \begin{figure}
+      \centering
+      \includegraphics[height=0.8\textheight]{imgs/push_exec.png}
+      \caption{Execução de um programa Push. Adaptado de \cite{survey}}
+      \label{fig:push}
+  \end{figure}
+\end{frame}
+
+\begin{frame}{\textit{Grammar-guided} GP}
+  \begin{itemize}
+    \item Segundo maior grupo de algoritmos.
+    \item Dois componentes: uma gramática livre de contexto e uma lista de números.
+    \item A partir de um \textit{scaffold}, escolhemos o ``buraco''
+      mais a esquerda disponível.
+    \item Dada uma quantidade $p$ de possíveis instruções e o primeiro número $n$
+      da lista de números, escolhemos a solução de número $n \mod p$.
+  \end{itemize}
+\end{frame}
+
+% \input{gramatica_beamer}
+
+\begin{frame}{\textit{Linear} GP}
+  \begin{itemize}
+    \item Semelhante a Assembly
+    \item Consiste de uma série de registradores, os quais literais podem ser
+      carregados ou guardados.
+    \item Instruções manipulam o conteúdo dos registradores
+  \end{itemize}
+\end{frame}
+
+\section{Resultados}
+% \input{tabela_beamer}
+\begin{frame}{Desempenho no PSB1}
+  \begin{itemize}
+    \item Ao analisar os dados de desempenho, os autores notaram o seguinte \cite{survey}:
+    \item Não há um algoritmo de GP que domine o outro; todos têm pontos
+      fortes e são os melhores em algum problema.
+    \item Apesar de alguns algoritmos acharem soluções perfeitas para alguns
+      dos problemas do PSB1, há grande variação de resultados, especialmente
+      em problemas mais ``difíceis''.
+    \item No geral, problemas que requerem iteração/recursão, múltiplos subproblemas
+      ou mudança de tipos apresentam desempenho ruim para todos os algoritmos.
+  \end{itemize}
+\end{frame}
+
+\section{Conclusão}
+\begin{frame}{Conclusão}
+  \begin{enumerate}
+    \item Os autores convidam os pesquisadores da área a desenvolver técnicas
+      que lidem melhor com problemas recursivos, bem como problemas compostos
+      por subproblemas.
+    \item Também ressaltam que, apesar dos resultados, programas gerados por
+      GP devem ser mais parecidos com programas escritos por humanos para serem
+      adotados de modo mais amplo.
+  \end{enumerate}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \frametitle{Referências}
+
+    \bibliographystyle{apalike}
+    \bibliography{references}
+\end{frame}
+\end{document}
