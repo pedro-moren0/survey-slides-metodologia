@@ -1,24 +1,35 @@
-% Incluído em main.tex via \input{gramatica_beamer}
-% Requer no preâmbulo de main.tex: pacote array, \tok e \ou
-\begin{frame}{\textit{Grammar-guided} GP: gramática}
+% gramatica_beamer.tex
+% Slide da gramática (problema Smallest, versão simplificada).
+% Inclua no main.tex com \input{gramatica_beamer} ou \include{gramatica_beamer}.
+% Não precisa de pacotes extras: só do \usepackage[T1]{fontenc} (já presente
+% no main), para que < e > saiam corretos em fonte monoespaçada.
+
+% Token especial (NEWLINE, INDENT) em negrito sem serifa
+\providecommand{\tok}[1]{\mbox{\textsf{\textbf{#1}}}}
+% Barra que separa as alternativas da BNF
+\providecommand{\ou}{$\mid$\ }
+
+\begin{frame}{\textit{Grammar-guided} GP}
+  \begin{figure}
+  \centering
+  \begin{examples}
   \small
   \ttfamily
   \setlength{\tabcolsep}{4pt}
   \renewcommand{\arraystretch}{1.35}
-  \begin{tabular}{@{}l l >{\raggedright\arraybackslash}p{0.78\textwidth}@{}}
-    <program>   & ::= & def smallest(int1, int2): \tok{NEWLINE} \tok{INDENT} \newline
-                        bool1 = bool() \tok{NEWLINE} <stmt> return <int> \\
-    <stmt>      & ::= & <stmt><stmt> \ou <bool\_var> = <bool> \tok{NEWLINE} \newline
-                        \ou <int\_var> = <int> \tok{NEWLINE} \newline
-                        \ou if <bool>: \tok{NEWLINE} \tok{INDENT} <stmt> \tok{DEDENT} \newline
-                        \ou while <bool>: \tok{NEWLINE} \tok{INDENT} <stmt> \tok{DEDENT} \\
-    <int\_var>  & ::= & int1 \ou int2 \\
-    <int\_op>   & ::= & + \ou - \ou * \ou / \ou \% \\
-    <int>       & ::= & <int\_var> \ou <int> <int\_op> <int> \newline
-                        \ou min(<int>, <int>) \ou max(<int>, <int>) \\
-    <bool\_var> & ::= & bool1 \\
-    <bool\_op>  & ::= & == \ou > \ou < \ou != \ou >= \ou <= \\
-    <bool>      & ::= & True \ou False \ou <bool\_var> \ou <bool> <bool\_op> <bool> \newline
-                        \ou <int> <bool\_op> <int> \\
+  \begin{tabular}{@{}l l l@{}}
+    &n = &[13, 17, 7, 24, 21, 20, 18, 28, 4, 29] \\
+    <program>  & ::= & def sum(int1, int2): \tok{NEWLINE} \tok{INDENT} \\
+               &     & int3 = int() \tok{NEWLINE} \\
+               &     & <stmt> return <int> \\
+    <stmt>     & ::= & <stmt><stmt> \\
+               & \ou & <int\_var> = <int> \tok{NEWLINE} \\
+    <int\_var> & ::= & int1 \ou int2 \ou int3 \\
+    <int\_op>  & ::= & + \ou - \ou * \ou / \ou \% \\
+    <int>      & ::= & <int\_var> \\
+               & \ou & <int> <int\_op> <int> \\
   \end{tabular}
+  \end{examples}
+  \caption{Exemplo de uma derivação de programa GE. Adaptado de \cite{survey}.}
+  \end{figure}
 \end{frame}

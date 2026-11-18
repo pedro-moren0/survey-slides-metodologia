@@ -75,12 +75,12 @@ Pós-graduação em Ciência da Computação - UFABC}
 \input{conceitualizacao}
 \input{introducao}
 
-\section{Técnicas}
+\subsection{Principais algoritmos}
 \begin{frame}{\textit{Stack-based} GP}
   \begin{itemize}
-    \item Expoente é o Push \cite{pushgp} e variantes,
-      linguagem projetada especificamente para GP.
-    \item Compõe a maior quantidade de artigos no \textit{survey}.
+    \item Compõe a maior quantidade de artigos no \textit{survey} (37 artigos).
+    \item Expoente é o Push \cite{pushgp} e variantes.
+    \item Linguagem projetada especificamente para GP.
     \item Programas são listas de instruções e literais.
     \item Um literal é depositado na pilha do seu tipo e uma instrução consome
       elementos das pilhas, empilhando seus resultados.
@@ -100,7 +100,8 @@ Pós-graduação em Ciência da Computação - UFABC}
 
 \begin{frame}{\textit{Grammar-guided} GP}
   \begin{itemize}
-    \item Segundo maior grupo de algoritmos.
+    \item Segundo maior grupo de algoritmos (12 artigos).
+    \item \textit{Grammatical Evolution} (GE) \cite{gramevo} e seus descendentes
     \item Dois componentes: uma gramática livre de contexto e uma lista de números.
     \item A partir de um \textit{scaffold}, escolhemos o ``buraco''
       mais a esquerda disponível.
@@ -109,10 +110,19 @@ Pós-graduação em Ciência da Computação - UFABC}
   \end{itemize}
 \end{frame}
 
-% \input{gramatica_beamer}
+\input{gramatica_beamer}
+\begin{frame}{\textit{Grammar-guided} GP}
+  \begin{figure}
+      \centering
+      \includegraphics[width=0.9\linewidth]{imgs/g3p_derivation.png}
+      \caption{Exemplo de uma derivação de programa GE. Adaptado de \cite{survey}.}
+      \label{fig:g3pderiv}
+  \end{figure}
+\end{frame}
 
-\begin{frame}{\textit{Linear} GP}
+\begin{frame}{Outros algoritmos}
   \begin{itemize}
+    \item Destaque: \textit{Linear GP} \cite{lineargp} (5 artigos).
     \item Semelhante a Assembly
     \item Consiste de uma série de registradores, os quais literais podem ser
       carregados ou guardados.
@@ -120,8 +130,8 @@ Pós-graduação em Ciência da Computação - UFABC}
   \end{itemize}
 \end{frame}
 
-\section{Resultados}
-% \input{tabela_beamer}
+\subsection{Desempenho no PSB1}
+\input{tabela_beamer}
 \begin{frame}{Desempenho no PSB1}
   \begin{itemize}
     \item Ao analisar os dados de desempenho, os autores notaram o seguinte \cite{survey}:
@@ -135,16 +145,27 @@ Pós-graduação em Ciência da Computação - UFABC}
   \end{itemize}
 \end{frame}
 
-\section{Conclusão}
+\subsection{Conclusão}
 \begin{frame}{Conclusão}
-  \begin{enumerate}
+  \begin{itemize}
     \item Os autores convidam os pesquisadores da área a desenvolver técnicas
       que lidem melhor com problemas recursivos, bem como problemas compostos
       por subproblemas.
     \item Também ressaltam que, apesar dos resultados, programas gerados por
       GP devem ser mais parecidos com programas escritos por humanos para serem
       adotados de modo mais amplo.
-  \end{enumerate}
+  \end{itemize}
+\end{frame}
+
+\section{Críticas}
+\begin{frame}{Críticas}
+  \begin{itemize}
+    \item Nenhuma crítica feita pelos autores à metodologia e qualidade
+      dos dados disponíveis na literatura.
+    \item Nenhuma crítica feita pelos autores à falta de outros tipos de dados
+      relevantes (qualidade das soluções, comprimento das soluções, tempo total
+      de execução dos experimentos, ambiente de execução, etc).
+  \end{itemize}
 \end{frame}
 
 \begin{frame}[allowframebreaks]
